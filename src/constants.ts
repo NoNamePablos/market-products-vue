@@ -1,17 +1,36 @@
 export const COLORS = {
-  black: {
-    DEFAULT: '#000000',
+  background:{
+    DEFAULT:'#BFBFBF',
+    text:'#291E0F'
   },
-  white: {
-    DEFAULT: '#FFFFFF',
+  surface:{
+    DEFAULT:'#fff',
+    text:'#414141',
   },
-  red: {
-    DEFAULT: '#FF0000',
+  primary:{
+    DEFAULT: '#F63',
+    text:'#fff'
   },
-  blue: {
-    DEFAULT: '#0000FF',
+  secondary:{
+    DEFAULT:'#70C05B',
+    text:'#fff'
   },
-  gray: {
-    DEFAULT: '#e6e6e6',
+  grayscale:{
+    DEFAULT: '#F3F2F1',
+    light:'#BFBFBF',
+    hard:'#8F8F8F',
+    hardest:'#606060'
   },
+  success:{
+    DEFAULT: '#008C49',
+  },
+  info:{
+    DEFAULT:'#1CB9FC'
+  },
+  warning:{
+    DEFAULT:'#FCA21C',
+  },
+  error:{
+    DEFAULT:'#D80000',
+  }
 };
