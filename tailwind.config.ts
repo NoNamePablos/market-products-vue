@@ -22,17 +22,13 @@ const config: Config = {
     './node_modules/primevue/**/*.{vue,js,ts,jsx,tsx}',
   ],
   theme: {
-    spacing: {
-      inherit: 'inherit',
-      '0': '0',
-      '1': '1px',
-      '4': '4px',
-      ...spacing(8, 512),
-    },
     screens: {
       phone: '480px',
       tablet: '768px',
       desktop: '1024px',
+    },
+    fontFamily: {
+      sans: ['Rubik','Arial','Roboto','sans-serif'],
     },
     colors: {
       transparent: 'transparent',
