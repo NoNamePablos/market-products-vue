@@ -41,9 +41,26 @@ withDefaults(defineProps<ITypography>(),{
     @apply text-[20px] tablet:text-l;
   }
   .size_xl{
-    @apply text-[32px] tablet:text-xl;
+    @apply text-[32px] tablet:text-xl ;
   }
-
+  .bold{
+    @apply font-bold;
+  }
+  .tag_h1{
+    @apply text-[48px] tablet:text-[64px] font-bold;
+  }
+  .tag_h2{
+    @apply text-[36px] tablet:text-[48px] font-bold;
+  }
+  .tag_h3{
+    @apply text-[24px] tablet:text-[36px] font-bold;
+  }
+  .tag_h4{
+    @apply text-[20px] tablet:text-[24px] font-bold;
+  }
+  .tag_h5,.tag_h6{
+    @apply text-[18px] tablet:text-[16px] font-bold;
+  }
 
 
 

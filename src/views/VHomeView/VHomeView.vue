@@ -16,6 +16,7 @@
 
 <template>
   <div>
-    <Typography size="s" :header="true" tag="h1" :bold="true" >Header 1</Typography>
+    <Typography size="s"  :bold="true" >Header 1</Typography>
+    <Typography  tag="h1"  >Header 1</Typography>
   </div>
 </template>
