@@ -30,6 +30,14 @@ const config: Config = {
     fontFamily: {
       sans: ['Rubik','Arial','Roboto','sans-serif'],
     },
+    fontSize: {
+      xs:'12px',
+      s:'16px',
+      m:'18px',
+      l:'24px',
+      xl:'36px',
+
+    },
     colors: {
       transparent: 'transparent',
       ...COLORS,
