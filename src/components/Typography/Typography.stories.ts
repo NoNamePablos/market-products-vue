@@ -2,7 +2,7 @@ import type {Meta, StoryFn, StoryObj} from '@storybook/vue3';
 import { Typography } from '@/components/Typography';
 
 const meta = {
-  title: 'Typography/Typography',
+  title: 'Shared/Typography',
   component: Typography,
   tags: ['autodocs'],
 } satisfies Meta<typeof Typography>;

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 
 
-import {onMounted, ref, toRaw, toRefs} from "vue";
+import {ref, toRaw} from "vue";
 
 type TOrientaiton='vertical'|'horizontal'
 type TLogoColor='white'|'black'
@@ -29,7 +29,7 @@ const isFullBaseLogo=ref(orientation==='vertical'&&withText&&bgColor=='white'&&t
 </script>
 
 <template>
-  <div class="logo" :class="{'logo-black':colorfull}">
+  <div class="logo" :class="{'logo-black':!colorfull}">
     <svg  v-if="isBaseLogo" xmlns="http://www.w3.org/2000/svg" width="231" height="165" viewBox="0 0 231 165" fill="none">
       <path d="M162.391 53.4805H63.0725C60.9898 53.4805 59.2968 55.2457 59.4782 57.3197C61.655 82.013 84.6656 101.444 112.729 101.444C140.791 101.444 163.802 82.013 165.979 57.3197C166.167 55.2457 164.474 53.4805 162.391 53.4805Z" fill="#FF6633"/>
       <path d="M94.8044 16.5315C93.6959 16.5315 92.5941 16.0349 91.8752 15.0818C88.2472 10.3163 81.3541 7.34959 73.8899 7.34959C66.4258 7.34959 59.5326 10.3096 55.9047 15.0818C54.6752 16.6993 52.3641 17.0081 50.7516 15.7798C49.1325 14.5515 48.8234 12.2426 50.0529 10.6317C55.1186 3.97348 64.0273 0 73.8899 0C83.7526 0 92.6612 3.97348 97.7337 10.6317C98.9631 12.2493 98.6474 14.5515 97.0349 15.7798C96.3631 16.2899 95.5838 16.5315 94.8044 16.5315Z" fill="#414141"/>
