@@ -3,6 +3,9 @@ export const COLORS = {
     DEFAULT:'#BFBFBF',
     text:'#291E0F'
   },
+  white:{
+    DEFAULT:'#fff',
+  },
   surface:{
     DEFAULT:'#fff',
     text:'#414141',

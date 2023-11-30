@@ -10,11 +10,11 @@ import VIcon from "@/components/VIcon/VIcon.vue";
   <header>
     <VContainer>
       <VLogo/>
-        <VButton>
+        <VButton :accent="'secondary'" size="m">
           <template #left-icon>
             <VIcon name="ChevronLeft"/>
           </template>
-          test
+          Каталог
         </VButton>
     </VContainer>
   </header>
