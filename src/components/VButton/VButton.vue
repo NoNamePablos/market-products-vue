@@ -2,11 +2,6 @@
 import {computed, onMounted, useSlots} from "vue";
 import {cva,type VariantProps} from "class-variance-authority";
 
-
-
-
-
-
 type TButtonAccent='primary'|'secondary'|'grayscale'|'error';
 type TButtonSize='l'|'m'|'s'
 type TButtonDecoration='default'|'outline'|'empty';
