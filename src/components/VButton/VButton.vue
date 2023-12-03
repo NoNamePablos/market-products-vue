@@ -86,7 +86,7 @@ const buttonClass=computed(()=>{
 </template>
 <style lang="scss">
   .button{
-    @apply flex text-white justify-center items-center w-max gap-[8px] p-[8px] leading-[150%] font-sans cursor-pointer rounded-[4px] transition-all duration-300 ease-out;
+    @apply flex text-white justify-center items-center w-max gap-[8px] p-[8px] leading-[150%] font-sans cursor-pointer rounded-[4px] transition-all duration-300 ease-out select-none;
     &.large{
       @apply p-[16px];
     }

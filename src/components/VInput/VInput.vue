@@ -8,14 +8,20 @@ import {computed, ref, useSlots} from "vue";
           TLargeSize|
           TMediumSize
   interface IInputProps{
-    label:string;
-    placeholder:string;
+    label?:string;
+    placeholder?:string;
     modelValue:string;
-    size:TInputSize,
-    disabled:boolean;
+    size?:TInputSize,
+    disabled?:boolean;
     error?:string;
+    borderColor:'primary'|'error'|'secondary'|'grayscale';
   }
-  defineProps<IInputProps>();
+  withDefaults( defineProps<IInputProps>(),{
+    size:'m',
+    placeholder:'',
+    disabled:false,
+    borderColor:'grayscale',
+  })
   const isFocused=ref<boolean>(false)
   const slots=useSlots();
   const emit=defineEmits<{
@@ -38,14 +44,14 @@ import {computed, ref, useSlots} from "vue";
 <template>
   <div class="input-group" >
     <div @click="handleFocus" class="input-group__label" v-if="label">{{label}}</div>
-    <div class="input" :class="[{focus:isFocused},`size_${size}`,{'with-icon':slots['left-icon']}]">
+    <div class="input" :class="[{focus:isFocused},`size_${size}`,`border_${borderColor}`,{'with-icon':slots['left-icon']}]">
       <div class="input__icon" v-if="slots['left-icon']">
         <slot name="left-icon"></slot>
       </div>
       <input
           type="text"
           ref="inputRef"
-          placeholder="value"
+          :placeholder="placeholder"
           @input="handleChange"
           :value="modelValue"
           @focus="isFocused=true"
@@ -72,6 +78,7 @@ import {computed, ref, useSlots} from "vue";
     }
     &__icon{
       @apply w-[24px] h-[24px] flex items-center justify-center;
+
     }
   }
   .with-icon{
@@ -86,5 +93,17 @@ import {computed, ref, useSlots} from "vue";
   }
   .size_m{
     @apply h-[40px];
+  }
+
+  .border{
+    &_graycale{
+      @apply border-grayscale-light;
+    }
+    &_secondary{
+      @apply border-secondary;
+    }
+    &_red{
+      @apply border-error;
+    }
   }
 </style>
