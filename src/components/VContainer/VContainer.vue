@@ -9,6 +9,6 @@
 </template>
 <style>
 .container{
-  @apply max-w-[1280px];
+  @apply max-w-[1280px] mx-auto;
 }
 </style>

@@ -25,7 +25,7 @@ const config: Config = {
     screens: {
       phone: '480px',
       tablet: '768px',
-      desktop: '1024px',
+      desktop: '1280px',
     },
     fontFamily: {
       sans: ['Rubik','Arial','Roboto','sans-serif'],

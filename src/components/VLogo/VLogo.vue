@@ -99,6 +99,9 @@ const isFullBaseLogo=ref(orientation==='vertical'&&withText&&bgColor=='white'&&t
   </div>
 </template>
 <style lang="scss">
+.logo{
+  @apply flex max-w-full max-h-full items-center justify-center;
+}
 .logo-black{
   svg path{
     @apply fill-surface-text;

@@ -9,7 +9,7 @@ interface ITypography{
   bold?:boolean;
 }
 withDefaults(defineProps<ITypography>(),{
-  tag:'p',
+  tag:'span',
   size:'s',
   bold:false,
 })
