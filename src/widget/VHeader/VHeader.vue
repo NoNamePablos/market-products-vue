@@ -4,11 +4,12 @@ import VLogo from "@/components/VLogo/VLogo.vue";
 import VButton from "@/components/VButton/VButton.vue";
 import VIcon from "@/components/VIcon/VIcon.vue";
 import VInput from "@/components/VInput/VInput.vue";
-import {ref} from "vue";
+import {reactive, ref} from "vue";
 import VCartButton from "@/components/VCartButton/VCartButton.vue";
 import VUserList from "@/widget/VUserList/VUserList.vue";
 import type {VHeaderNavigationProps} from "@/components/VHeaderNavigation";
 import VHeaderNavigation from "@/components/VHeaderNavigation/VHeaderNavigation.vue";
+import VUserMenu from "@/components/VUserMenu/VUserMenu.vue";
 const str=ref("");
 const isOpenMenu=ref<boolean>(false);
 const headerNavigationList:Array<VHeaderNavigationProps>=[
@@ -31,6 +32,12 @@ const headerNavigationList:Array<VHeaderNavigationProps>=[
     icon:'ShoppingCart'
   }
 ]
+
+const UserMenu=reactive({
+  avatar:'https://i.ytimg.com/vi/lh2wSeUGNSo/hqdefault.jpg',
+  name:'Алексей',
+  menu:headerNavigationList,
+})
 
 </script>
 
@@ -56,6 +63,7 @@ const headerNavigationList:Array<VHeaderNavigationProps>=[
         </VInput>
         <!-- header navigation       -->
         <VHeaderNavigation :data="headerNavigationList"/>
+        <VUserMenu class="header__user-menu" :data="UserMenu"/>
       </div>
     </VContainer>
   </header>
@@ -68,6 +76,9 @@ const headerNavigationList:Array<VHeaderNavigationProps>=[
   }
   &__logo{
     @apply max-w-[150px];
+  }
+  &__user-menu{
+    @apply w-[217px]
   }
 }
 
