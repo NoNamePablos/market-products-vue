@@ -43,7 +43,7 @@ const isOpenMenu=ref<boolean>(false);
 </template>
 <style lang="scss" scoped>
 .header{
-  @apply flex mx-auto h-[72px];
+  @apply relative flex mx-auto h-[72px];
   &__container{
     @apply flex h-full items-center justify-between;
   }
@@ -51,6 +51,7 @@ const isOpenMenu=ref<boolean>(false);
     @apply max-w-[150px];
   }
 }
+
 .v-enter-active,
 .v-leave-active {
   @apply transition-opacity duration-500 ease-out
