@@ -7,9 +7,30 @@ import VInput from "@/components/VInput/VInput.vue";
 import {ref} from "vue";
 import VCartButton from "@/components/VCartButton/VCartButton.vue";
 import VUserList from "@/widget/VUserList/VUserList.vue";
+import type {VHeaderNavigationProps} from "@/components/VHeaderNavigation";
+import VHeaderNavigation from "@/components/VHeaderNavigation/VHeaderNavigation.vue";
 const str=ref("");
 const isOpenMenu=ref<boolean>(false);
-
+const headerNavigationList:Array<VHeaderNavigationProps>=[
+  {
+    title:'Избранное',
+    link:'/',
+    count:0,
+    icon:'Heart'
+  },
+  {
+    title:'Заказы',
+    link:'/',
+    count:2,
+    icon:'Package'
+  },
+  {
+    title:'Корзина',
+    link:'/',
+    count:2,
+    icon:'ShoppingCart'
+  }
+]
 
 </script>
 
@@ -33,10 +54,8 @@ const isOpenMenu=ref<boolean>(false);
             <VIcon name="Search"/>
           </template>
         </VInput>
-        <VCartButton title="Избранное" link="/" :count="5"  icon="Heart" />
-        <VCartButton title="Заказы" link="/" :count="3" icon="Package" />
-        <VCartButton title="Корзина" link="/" :count="2" icon="ShoppingCart" />
-        <VUserList/>
+        <!-- header navigation       -->
+        <VHeaderNavigation :data="headerNavigationList"/>
       </div>
     </VContainer>
   </header>
@@ -45,7 +64,7 @@ const isOpenMenu=ref<boolean>(false);
 .header{
   @apply relative flex mx-auto h-[72px];
   &__container{
-    @apply flex h-full items-center justify-between;
+    @apply flex h-full items-center gap-[40px];
   }
   &__logo{
     @apply max-w-[150px];
