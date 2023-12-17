@@ -64,30 +64,31 @@
 </script>
 
 <template>
-  <VDropdown>
-    <template #header>
-      <VAvatar/>
-    </template>
-    <template #body>
-      <VDropdown :is-inside="true">
-        <template #header>
-          Товары
-        </template>
-        <template #body>
-          <ul class="catalog-list">
-            <li class="catalog-list__item" v-for="(item,idx) in catalogLinks">
-              <Typography size="s">
-                <router-link :to="item.link">{{item.tilte}}</router-link>
-              </Typography>
-            </li>
-          </ul>
-        </template>
-      </VDropdown>
-      <router-link to="/logout">Выйти</router-link>
-    </template>
-  </VDropdown>
+  <div class="user-menu">
+    <VDropdown>
+      <template #header>
+        <VAvatar/>
+      </template>
+      <template #body>
+        <ul class="catalog-list">
+          <li class="catalog-list__item" v-for="(item,idx) in catalogLinks">
+            <Typography size="s">
+              <router-link :to="item.link">{{item.tilte}}</router-link>
+            </Typography>
+          </li>
+        </ul>
+        <router-link to="/logout">Выйти</router-link>
+      </template>
+    </VDropdown>
+  </div>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
+.user-menu{
+  @apply relative;
+}
+.user-menu :deep(.dropdown){
+  @apply absolute top-0 right-0;
+}
 .catalog-list{
   @apply flex flex-col gap-[24px];
   &__item{

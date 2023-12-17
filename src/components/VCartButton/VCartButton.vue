@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import VIcon from "@/components/VIcon/VIcon.vue";
+import Typography from "@/components/Typography/Typography.vue";
 interface ICartButtonProps{
   link:string;
   icon:string;
@@ -19,8 +20,8 @@ withDefaults(defineProps<ICartButtonProps>(),{
 <template>
   <router-link :to="link" class="cart-button">
     <VIcon :size="24" :name="icon"  class="cart-button__icon" />
-    <div class="cart-button__title" :class="{active:active}">{{title}}</div>
-    <div class="cart-button__count" v-if="count">{{count}}</div>
+    <Typography   size="xs"  class="cart-button__title" :class="{active:active}">{{title}}</Typography>
+    <Typography   size="xs"  class="cart-button__count" v-if="count">{{count}}</Typography>
   </router-link>
 </template>
 <style lang="scss">
